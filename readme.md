@@ -36,7 +36,7 @@ python plistUnpacker.py [Directory/xxx.plist]
   http://www.cnblogs.com/relvin/p/5543612.html
 
 
-
+https://www.imooc.com/article/15015
 Mac安装Pillow模块解决办法
 2016.12.04 22:42 1936浏览  字号
 Mac Python上安装Pillow报错：
