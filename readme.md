@@ -34,3 +34,28 @@ python plistUnpacker.py [Directory/xxx.plist]
 　　成功会在当前的目录下创建一个或多个与plist文件相同的文件夹并存放这些散图文件。
   
   http://www.cnblogs.com/relvin/p/5543612.html
+
+
+
+Mac安装Pillow模块解决办法
+2016.12.04 22:42 1936浏览  字号
+Mac Python上安装Pillow报错：
+ValueError: jpeg is required unless explicitly disabled using
+问题原因：
+这是因为在Pillow3.0以上的版本中libjpeg和zlib是必不可少的。安装这两个库后，Pillow便可正常安装。
+http://stackoverflow.com/questions/34631806/fail-during-installation-of-pillow-python-module-in-linux
+解决步骤：
+
+打开终端窗口, 粘贴以下脚本。安装brew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+通过brew安装libjpeg
+brew install libjpeg zlib
+
+通过brew安装zlib
+
+brew tap homebrew/dupes
+brew install zlib
+brew link zlib --force
+通过pip安装Pillow
+sudo pip install Pillow
